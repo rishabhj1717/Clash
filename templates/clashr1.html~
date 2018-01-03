@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+{% extends 'base.html' %}
+{% block title %}QUESTIONS{% endblock %}
+<body>
+{% block body %}
+	<br>
+	<form action="check" method="post">{% csrf_token %}
+		{{ q1.question }}
+	<br>
+	<input type="radio" name="Options" value="a">Option A<br>
+	<input type="radio" name="Options" value="b">Option B<br>
+	<input type="radio" name="Options" value="c">Option C<br>
+	<input type="radio" name="Options" value="d">Option D<br>
+	<input type="hidden" name="id" value="{{q1.id}}">
+	<input type="submit" name="submit">
+    <button type="button">FIBONNACI</button>
+    <button type="button">SKIPS</button>
+    <div>Score: {{q1.total_score}}</div>
+	</form>
+{% endblock %}
+</body>
+</html>

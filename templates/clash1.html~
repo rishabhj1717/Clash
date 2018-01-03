@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+{% extends 'base.html' %}
+{% block title %}QUESTIONS{% endblock %}
+<body>
+{% block body %}
+	<br>
+	{% for question in q %}
+		{{ question.question_text }}
+	{% endfor %}
+	<form action="submit" method="post">
+	<textarea rows="10" columns="40" name="tbox"></textarea><br>
+	<input type="radio" name="Options" value="Option A" checked>Option A<br>
+	<input type="radio" name="Options" value="Option B" checked>Option B<br>
+	<input type="radio" name="Options" value="Option C" checked>Option c<br>
+	<input type="radio" name="Options" value="Option D" checked>Option D<br>
+	<input type="submit" value="submit">
+	</form>
+{% endblock %}
+</body>
+</html>

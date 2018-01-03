@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form action="login" method="post">{% csrf_token %}
+Player1name:<input type="text" name="Player1"><br>
+Player2name:<input type="text" name="Player2"><br>
+Player1email:<input type="email" name="PLayer1email"><br>
+Player2email:<input type="email" name="PLayer2email"><br>
+Player1n:<input type="text" name="PLayer1no"><br>
+Player2n:<input type="text" name="PLayer2no"><br>
+Team_username:<input type="text" name="t_name"><br>
+Team_userpassword:<input type="password" name="t_password"><br>
+<input type="submit" name="Submit"><br>
+</form>
+</body>
+</html>

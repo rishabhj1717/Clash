@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form action="createuser" method="post">{% csrf_token %}
+Player1name:<input type="text" name="Player1"><br>
+Player1n:<input type="text" name="Player1no"><br>
+Player1email:<input type="email" name="Player1email"><br>
+Player2name:<input type="text" name="Player2"><br>
+Player2n:<input type="text" name="Player2no"><br>
+Player2email:<input type="email" name="Player2email"><br>
+Team_usernamereg:<input type="text" name="regusername" blank="True"><br>
+Team_passwordreg:<input type="password" name="reguserpassword"><br>
+<input type="radio" name="LEVEL" value="0" checked>junior<br>
+<input type="radio" name="LEVEL" value="1">senior<br>
+<input type="submit" name="Register" value="Register"><br>
+</form>
+<form action="login_page" method="get">
+<input type="submit" name="Gotologin" value="Login Page"><br>
+</form>
+</form>
+<form action="ques_page" method="get">{% csrf_token %}
+<input type="submit" name="ques" value="Questions"><br>
+</form>
+<div>CLASH</div>
+</body>
+</html>

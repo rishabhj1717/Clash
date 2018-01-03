@@ -1,0 +1,10 @@
+from django.contrib import admin
+from .models import Players,Question,Qattempt
+from django.contrib.auth.models import User
+class UserAdmin(admin.ModelAdmin):
+     list_display=('t_name','t_password')
+     search_fields=['t_name','t_password']
+admin.site.register(Players)
+admin.site.register(Question)
+admin.site.register(Qatempt)
+
